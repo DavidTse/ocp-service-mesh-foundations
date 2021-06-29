@@ -54,5 +54,14 @@ spec:
         passphrase: redhat
     tracing:
       enabled: true
-
-
+---
+  apiVersion: jaegertracing.io/v1
+  kind: Jaeger
+  spec:
+    strategy: production
+    storage:
+      type: elasticsearch
+      esIndexCleaner:
+        enabled: false
+        numberOfDays: 7
+        schedule: "55 23 * * *"
