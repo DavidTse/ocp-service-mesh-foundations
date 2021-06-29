@@ -6,4 +6,4 @@ spec:
   members:
   # a list of projects joined into the service mesh
   - user1-tutorial
-
+  - bookinfo
